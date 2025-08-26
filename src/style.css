@@ -23,7 +23,7 @@ body {
 #main {
     height: 100vh;
     width: 100vw;
-    background: #000;
+    /* background: #000; */
 }
 
 #nav {
@@ -65,13 +65,36 @@ body {
     font-family: 'Geist';
     font-weight: 200;
 }
+body.dark #main{
+    background-color: #292929;
+    color: #f3f3f3;
+}
+body.dark #nav,#page1 #Content,#page2,#page3{
+    background-color: gray;
+    color: #FFFFFF;
+}
+body.dark #mid a{
+    color: #ffffff;
+}
 
 #nav #right {
     display: flex;
     justify-content: space-around;
     gap: 2vw;
 }
-
+#dark{
+    display: flex;
+}
+#dark i{
+    /* margin-left: 2vw; */
+    cursor: pointer;
+}
+#dark #sun{
+    /* display: none; */
+}
+#dark #moon{
+    display: none;
+}
 #page1 {
     background: #F9FAFB;
     height: 120vh;
@@ -368,7 +391,6 @@ body {
     color: rgb(255, 0, 13);
     cursor: pointer;
 }
-
 .links {
     display: flex;
     flex-direction: column;

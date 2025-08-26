@@ -65,17 +65,17 @@ body {
     font-family: 'Geist';
     font-weight: 200;
 }
-body.dark #main{
+/* body.dark #main{
     background-color: #292929;
     color: #f3f3f3;
 }
-body.dark #nav,#page1 #Content,#page2,#page3{
+body.dark #nav,#page1 #Content ,#page2,#page3{
     background-color: gray;
     color: #FFFFFF;
 }
 body.dark #mid a{
     color: #ffffff;
-}
+} */
 
 #nav #right {
     display: flex;
@@ -406,4 +406,31 @@ body.dark #mid a{
 
 .links a:hover {
     color: #f3f2f2;
+}
+#end{
+    /* border:2px solid #000; */
+    border-top: 1px solid #90A199;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #90A199;
+    font-family: 'Geist';
+
+}
+#end .i{
+    display: flex;
+}
+.i h4{
+    font-weight: 200;
+}
+
+#end .link-bottom{
+    display: flex;
+    /* justify-content: space-evenly; */
+    gap: 2vw;
+}
+.link-bottom a{
+    text-decoration: none;
+    color: #90A199;
 }

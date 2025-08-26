@@ -1,0 +1,387 @@
+@font-face {
+    font-family: 'Geist Mono';
+    src: url(/fonts/Geist\ Mono.ttf);
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url(/fonts/Geist.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#main {
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+}
+
+#nav {
+    position: fixed;
+    width: 99vw;
+    height: 10vh;
+    background: #FFFFFF;
+    background-blend-mode: blur;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#nav #logo {
+    font-size: 2vw;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    height: 8vh;
+    width: 4vw;
+    border-radius: 30px;
+
+}
+
+#nav #mid {
+    display: flex;
+    justify-content: space-around;
+    gap: 3vw;
+}
+
+#mid a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3vw;
+    font-family: 'Geist';
+    font-weight: 200;
+}
+
+#nav #right {
+    display: flex;
+    justify-content: space-around;
+    gap: 2vw;
+}
+
+#page1 {
+    background: #F9FAFB;
+    height: 120vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+#page1 #Content {
+    /* background: #000; */
+    height: 100vh;
+    color: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* gap: 3vh; */
+    /* margin-top: 2vh; */
+    /* align-items: center; */
+}
+
+#Content h1 {
+    margin-top: 20vh;
+    font-size: 4vw;
+    font-family: 'Geist';
+    text-align: center;
+    font-weight: 600;
+    color: #000;
+}
+
+#Content h2 {
+    font-size: 4vw;
+    font-family: 'Geist';
+    margin-left: 8.7vw;
+    font-weight: 500;
+    color: #4A5565;
+
+}
+
+#Content p {
+    color: #000;
+    text-align: left;
+    font-size: 15px;
+    font-family: 'Geist Mono';
+    line-height: 4vh;
+    margin: 2vh 7vw;
+    margin-left: 8.6vw;
+}
+
+#Content #shop-now {
+    height: 6vh;
+    width: 7vw;
+    margin-left: 8.6vw;
+    margin-right: 1vw;
+    background: #000;
+    color: white;
+    border: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#Content #shop-now:hover {
+    background: #292929;
+}
+
+#Content #View-collection {
+    height: 6vh;
+    width: 10vw;
+    font-size: 1rem;
+    font-family: 'Geist';
+    background: #f3f3f3;
+    border: 2px #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#Content #View-collection:hover {
+    background: #f3f2f2;
+}
+
+#page1 #product {
+    /* background: green; */
+    height: 100vh;
+}
+
+#product img {
+    object-fit: contain;
+    margin-top: 18vh;
+    margin-left: 2vw;
+    border-radius: 20px;
+    /* width: 650px; */
+    height: 580px;
+}
+
+#page2 {
+    height: 150vh;
+    width: 100vw;
+    /* background: #ff0000; */
+}
+
+#page2 #text {
+    text-align: center;
+    font-family: 'Geist';
+}
+
+#page2 h2 {
+    padding-top: 20vh;
+    font-size: 2.7vw;
+    font-weight: 600;
+}
+
+#text p {
+    font-size: 1.4vw;
+    margin: 2vh 25vw;
+}
+
+#page2 .card-wraper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-family: 'Geist';
+    cursor: pointer;
+
+}
+
+#page2 .card {
+    height: 60vh;
+    width: 20vw;
+    margin-top: 15vh;
+    /* background: #000; */
+
+}
+
+.card .card-product {
+    height: 45vh;
+    background: #F9FAFB;
+}
+
+.card-product img {
+    height: 48vh;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.card .card-discription {
+    font-size: 1.2vw;
+    margin-bottom: 2vh;
+    margin-top: 2.8vh;
+}
+
+.card-discription h3 {
+    font-weight: 200;
+}
+
+.card .card-price {
+    font-size: 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-price h3 {
+    font-weight: 200;
+}
+
+.card-price .product-color {
+    display: flex;
+    align-items: center;
+    gap: .3vw;
+}
+
+.product-color .black {
+    height: 2vh;
+    width: 1vw;
+    border-radius: 30px;
+    background: #000;
+}
+
+.product-color .gray {
+    height: 2vh;
+    width: 1vw;
+    border-radius: 30px;
+    background: gray;
+}
+
+#page2 #btn-product {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 13vh 15vh;
+
+}
+
+#btn-product button {
+    /* margin: 10vh 20vw; */
+    padding: 3vh 4vw;
+    font-size: 1.2vw;
+    background: #f3f3f3;
+    border: transparent;
+
+}
+
+#page3 {
+    height: 60vh;
+    background: #101828;
+}
+
+#page3 #footr {
+    /* background: #000; */
+    height: 80%;
+    display: grid;
+    margin-left: 2vw;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: space-evenly;
+    color: #FFFFFF;
+    /* align-items: center; */
+}
+
+#footr h2 {
+    color: #FFFFFF;
+    font-family: 'Geist';
+    margin-top: 5vh;
+    font-size: 1.5vw;
+    font-weight: 200;
+}
+
+#footr #first {
+    /* background-color: aliceblue; */
+    /* margin: 2vh 3vw; */
+    margin-right: 3vw;
+}
+
+#first h2 {
+    margin-top: 5vh;
+    font-size: 2vw;
+    font-weight: 300;
+    font-family: 'Geist';
+}
+
+#first img {
+    height: 3vh;
+    margin-right: 1vw;
+    border-radius: 5px;
+}
+
+#first p {
+    font-size: 1vw;
+    font-weight: 300;
+    color: #90A199;
+    margin-top: 2vh;
+    font-family: 'Geist';
+    line-height: 3vh;
+}
+
+#first .icon {
+    margin-top: 5vh;
+    display: flex;
+
+    /* align-items: center; */
+    /* text-align: center; */
+}
+
+.icon i {
+    margin-left: 1.5vw;
+    font-size: 1.5vw;
+    color: #90A199;
+}
+
+.icon #whatsapp:hover {
+    color: rgb(24, 167, 24);
+    cursor: pointer;
+}
+
+.icon #instagram:hover {
+    color: rgb(206, 10, 10);
+    cursor: pointer;
+}
+
+.icon #X:hover {
+    color: rgb(51, 30, 30);
+    cursor: pointer;
+}
+
+.icon #facebook:hover {
+    color: rgb(0, 74, 211);
+    cursor: pointer;
+}
+
+.icon #youtube:hover {
+    color: rgb(255, 0, 13);
+    cursor: pointer;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+}
+
+.links a {
+    text-decoration: none;
+    color: #90A199;
+    line-height: 5vh;
+    font-family: 'Geist';
+}
+
+.links a:hover {
+    color: #f3f2f2;
+}

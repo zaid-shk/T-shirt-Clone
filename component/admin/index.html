@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>Admin</title>
+</head>
+
+<body>
+    <div id="main">
+        <div id="nav">
+            <h2>Admin Panel</h2>
+            <div class="right">
+                <i class="ri-notification-3-line"></i>
+                <i class="ri-settings-3-line"></i>
+                <i class="ri-user-6-line"></i>
+                <i class="ri-logout-circle-r-line"></i>
+            </div>
+        </div>
+        <div id="second-main">
+
+            <div id="sidebar">
+                <div class="sidebar-in">
+                    <i class="ri-layout-grid-line"></i>
+                    <h2 id="desh-btn">Deshboard</h2>
+                </div>
+                <div class="sidebar-in">
+                    <i class="ri-box-3-line"></i>
+                    <h2 id="pro-btn">Product</h2>
+                </div>
+                <div class="sidebar-in">
+                    <i class="ri-shopping-cart-line"></i>
+                    <h2 id="ord-btn">Orders</h2>
+                </div>
+                <div class="sidebar-in">
+                    <i class="ri-group-line"></i>
+                    <h2 id="cust-btn">Customer</h2>
+                </div>
+                <div class="sidebar-in">
+                    <i class="ri-line-chart-line"></i>
+                    <h2 id="ana-btn">Analytics</h2>
+                </div>
+                <div class="sidebar-in">
+                    <i class="ri-price-tag-3-line"></i>
+                    <h2 id="cate-btn">Categories</h2>
+                </div>
+                <div class="sidebar-in">
+                    <i class="ri-settings-4-line"></i>
+                    <h2 id="set-btn">Setting</h2>
+                </div>
+            </div>
+            <div id="Deshboard">
+                <h2 class="h2">Deshboard</h2>
+                <p class="h2">Welcome back! Here's what's happening with your store today.</p>
+                <div class="box">
+
+                    <div class="card">
+                        <div class="left">
+                            <span class="title">Total Revenue</span>
+                            <span class="value">$12,426</span>
+                            <span class="change">↑ +12.5% vs last month</span>
+                        </div>
+                        <div class="icon">
+                            ₹
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="left">
+                            <span class="title">Total Orders</span>
+                            <span class="value">1,247</span>
+                            <span class="change">↑ +8.5% vs last month</span>
+                        </div>
+                        <div class="icon">
+                            <i class="ri-shopping-cart-line"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="left">
+                            <span class="title">Sold</span>
+                            <span class="value">3.242</span>
+                            <span class="change">↑ +15.5% vs last month</span>
+                        </div>
+                        <div class="icon">
+                            <i class="ri-box-3-line"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="left">
+                            <span class="title">New Customers</span>
+                            <span class="value">242</span>
+                            <span class="change" id="loss">↓ -2.4% vs last month</span>
+                        </div>
+                        <div class="icon">
+                            <i class="ri-group-line"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="mid-desh">
+                    <div class="chartset">
+                        <div class="card2">
+                            <h2>Sales Overview</h2>
+                            <p>Monthly sales and order trends</p>
+                            <canvas id="salesChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="quick-action">
+                        <h2 id="h2-h2">Quick Action</h2>
+                        <p id="p">Common tasks and shortcuts</p>
+                        <div class="quick" id="add-product">
+                            <div class="icons">
+                                <i style="background-color: #2B7FFF; color: #fff; width: 2vw;">+</i>
+                            </div>
+                            <div class="text">
+
+                                <h3>Add Product</h3>
+                                <p>Add a new T-shirt to your catalog</p>
+                            </div>
+                        </div>
+                        <div class="quick" id="inventry">
+                            <div class="icons">
+                                <i class="ri-box-3-line" style="background-color: green; color: #fff;"></i>
+                            </div>
+                            <div class="text">
+                                <h3>Add Product</h3>
+                                <p>Update stock levelsand availability</p>
+                            </div>
+                        </div>
+                        <div class="quick" id="view-customer">
+                            <div class="icons">
+                                <i class="ri-group-line" style="color: #fff; background-color: blueviolet;"></i>
+                            </div>
+                            <div class="text">
+                                <h3>View Customers</h3>
+                                <p>Manege Customer account and data</p>
+                            </div>
+                        </div>
+                        <div class="quick" id="Analytics">
+                            <div class="icons">
+                                <i class="ri-line-chart-line" style="background-color: orange; color: #fff;"></i>
+
+                            </div>
+                            <div class="text">
+                                <h3>Analytics</h3>
+                                <p>Veiw details sales and performance reports</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="end-deshboard">
+                    <div class="recent-order">
+                        <div class="in-main">
+                            <div class="last-text">
+                                <h2>Recent Order</h2>
+                                <p>Latest customer orders</p>
+                            </div>
+                            <button>View All</button>
+                        </div>
+                        <div class="last-main">
+                            <div class="card3">
+                                <div class="left">
+                                    <div class="order-id">
+                                        #ORD-001 <span class="status">completed</span>
+                                    </div>
+                                    <div class="name">John Smith</div>
+                                    <div class="email">john@example.com</div>
+                                </div>
+                                <div class="right">
+                                    <div class="price">$89.97</div>
+                                    <div class="items">3 items</div>
+                                    <div class="date">2024-01-15</div>
+                                </div>
+                            </div>
+                            <div class="card3">
+                                <div class="left">
+                                    <div class="order-id">
+                                        #ORD-002 <span class="status">completed</span>
+                                    </div>
+                                    <div class="name">Sahra Johnson</div>
+                                    <div class="email">sahra@example.com</div>
+                                </div>
+                                <div class="right">
+                                    <div class="price">$89.97</div>
+                                    <div class="items">3 items</div>
+                                    <div class="date">2024-01-15</div>
+                                </div>
+                            </div>
+                            <div class="card3">
+                                <div class="left">
+                                    <div class="order-id">
+                                        #ORD-003 <span class="status">completed</span>
+                                    </div>
+                                    <div class="name">Mike Davis</div>
+                                    <div class="email">mike@example.com</div>
+                                </div>
+                                <div class="right">
+                                    <div class="price">$89.97</div>
+                                    <div class="items">3 items</div>
+                                    <div class="date">2024-01-15</div>
+                                </div>
+                            </div>
+                            <div class="card3">
+                                <div class="left">
+                                    <div class="order-id">
+                                        #ORD-004 <span class="status">completed</span>
+                                    </div>
+                                    <div class="name">John Smith</div>
+                                    <div class="email">john@example.com</div>
+                                </div>
+                                <div class="right">
+                                    <div class="price">$89.97</div>
+                                    <div class="items">3 items</div>
+                                    <div class="date">2024-01-15</div>
+                                </div>
+                            </div>
+                            <div class="card3">
+                                <div class="left">
+                                    <div class="order-id">
+                                        #ORD-005 <span class="status">completed</span>
+                                    </div>
+                                    <div class="name">John Smith</div>
+                                    <div class="email">john@example.com</div>
+                                </div>
+                                <div class="right">
+                                    <div class="price">$89.97</div>
+                                    <div class="items">3 items</div>
+                                    <div class="date">2024-01-15</div>
+                                </div>
+                            </div>
+                            <div class="card3">
+                                <div class="left">
+                                    <div class="order-id">
+                                        #ORD-006 <span class="status">completed</span>
+                                    </div>
+                                    <div class="name">John Smith</div>
+                                    <div class="email">john@example.com</div>
+                                </div>
+                                <div class="right">
+                                    <div class="price">$89.97</div>
+                                    <div class="items">3 items</div>
+                                    <div class="date">2024-01-15</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-products">
+                        <div class="end-part">
+
+                            <div class="card4">
+                                <div class="card-header">
+                                    <h2>Top Products</h2>
+                                    <button>View All</button>
+                                </div>
+                                <div class="product">
+                                    <div class="product-left">
+                                        <div class="rank">1</div>
+                                        <div class="details">
+                                            <span>Classic White Tee</span>
+                                            <span>234 sold</span>
+                                        </div>
+                                    </div>
+                                    <div class="price">$6986.66</div>
+                                </div>
+                                <div class="product">
+                                    <div class="product-left">
+                                        <div class="rank">2</div>
+                                        <div class="details">
+                                            <span>Vintage Black Tee</span>
+                                            <span>189 sold</span>
+                                        </div>
+                                    </div>
+                                    <div class="price">$6611.11</div>
+                                </div>
+                                <div class="product">
+                                    <div class="product-left">
+                                        <div class="rank">3</div>
+                                        <div class="details">
+                                            <span>Organic Cotton Tee</span>
+                                            <span>156 sold</span>
+                                        </div>
+                                    </div>
+                                    <div class="price">$6238.44</div>
+                                </div>
+                                <div class="product">
+                                    <div class="product-left">
+                                        <div class="rank">4</div>
+                                        <div class="details">
+                                            <span>Oversized Comfort Tee</span>
+                                            <span>142 sold</span>
+                                        </div>
+                                    </div>
+                                    <div class="price">$4684.58</div>
+                                </div>
+                                <div class="product">
+                                    <div class="product-left">
+                                        <div class="rank">5</div>
+                                        <div class="details">
+                                            <span>Premium Cotton Blend</span>
+                                            <span>128 sold</span>
+                                        </div>
+                                    </div>
+                                    <div class="price">$5503.72</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="product-page">
+                <div id="text">
+                    <h2>Product Management</h2>
+                    <p>Manage your t-shirt inventory and product catalog</p>
+                </div>
+                <div class="second-p">
+                    <h3>Products(4)</h3>
+                    <p id="act">3 Active</p>
+                    <p id="avail">40 Stock Available</p>
+                    <p id="Out">1 Out of stock</p>
+                    <button>+ Add Product</button>
+                </div>
+                <div class="last-pro">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/120" alt="Classic White Tee">
+                        <div class="product-details">
+                            <h3>Classic White Tee</h3>
+                            <div class="product-info">Price: <span>$29.99</span></div>
+                            <div class="product-info">Stock: <span>150 units</span></div>
+                            <div class="product-info">Category: <span>Basic</span></div>
+                            <div class="product-info">Colors: <span>3 options</span></div>
+                            <div class="sizes">
+                                Available sizes:
+                                <button>S</button>
+                                <button>M</button>
+                                <button>L</button>
+                                <button>XL</button>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <div class="status">Active</div>
+                            <button class="edit">✏️ Edit</button>
+                            <button class="view">👁️ View</button>
+                            <button class="delete">🗑️ Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/120" alt="Vintage Black Tee">
+                        <div class="product-details">
+                            <h3>Vintage Black Tee</h3>
+                            <div class="product-info">Price: <span>$34.99</span></div>
+                            <div class="product-info">Stock: <span>89 units</span></div>
+                            <div class="product-info">Category: <span>Vintage</span></div>
+                            <div class="product-info">Colors: <span>3 options</span></div>
+                            <div class="sizes">
+                                Available sizes:
+                                <button>XS</button>
+                                <button>S</button>
+                                <button>M</button>
+                                <button>L</button>
+                                <button>XL</button>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <div class="status">Active</div>
+                            <button class="edit">✏️ Edit</button>
+                            <button class="view">👁️ View</button>
+                            <button class="delete">🗑️ Delete</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/120" alt="Vintage Black Tee">
+                        <div class="product-details">
+                            <h3>Vintage Black Tee</h3>
+                            <div class="product-info">Price: <span>$34.99</span></div>
+                            <div class="product-info">Stock: <span>89 units</span></div>
+                            <div class="product-info">Category: <span>Vintage</span></div>
+                            <div class="product-info">Colors: <span>3 options</span></div>
+                            <div class="sizes">
+                                Available sizes:
+                                <button>XS</button>
+                                <button>S</button>
+                                <button>M</button>
+                                <button>L</button>
+                                <button>XL</button>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <div class="status">Active</div>
+                            <button class="edit">✏️ Edit</button>
+                            <button class="view">👁️ View</button>
+                            <button class="delete">🗑️ Delete</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/120" alt="Vintage Black Tee">
+                        <div class="product-details">
+                            <h3>Vintage Black Tee</h3>
+                            <div class="product-info">Price: <span>$34.99</span></div>
+                            <div class="product-info">Stock: <span>89 units</span></div>
+                            <div class="product-info">Category: <span>Vintage</span></div>
+                            <div class="product-info">Colors: <span>3 options</span></div>
+                            <div class="sizes">
+                                Available sizes:
+                                <button>XS</button>
+                                <button>S</button>
+                                <button>M</button>
+                                <button>L</button>
+                                <button>XL</button>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <div class="status">Active</div>
+                            <button class="edit">✏️ Edit</button>
+                            <button class="view">👁️ View</button>
+                            <button class="delete">🗑️ Delete</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/120" alt="Vintage Black Tee">
+                        <div class="product-details">
+                            <h3>Vintage Black Tee</h3>
+                            <div class="product-info">Price: <span>$34.99</span></div>
+                            <div class="product-info">Stock: <span>89 units</span></div>
+                            <div class="product-info">Category: <span>Vintage</span></div>
+                            <div class="product-info">Colors: <span>3 options</span></div>
+                            <div class="sizes">
+                                Available sizes:
+                                <button>XS</button>
+                                <button>S</button>
+                                <button>M</button>
+                                <button>L</button>
+                                <button>XL</button>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <div class="status">Active</div>
+                            <button class="edit">✏️ Edit</button>
+                            <button class="view">👁️ View</button>
+                            <button class="delete">🗑️ Delete</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="order-page">
+                <h1 id="order-h1">Order Management</h1>
+                <p id="order-pera">Manage customer orders and fulfillment</p>
+
+                <div class="search-bar">
+                    <input type="text" placeholder="Search orders, customers...">
+                    <button class="filter-btn">🔽 All Orders</button>
+                </div>
+
+                <div class="order-card">
+                    <div class="order-left">
+                        <div class="order-id">
+                            ORD-001 <span class="status">completed</span>
+                        </div>
+                        <div class="order-info">Customer: <span>John Smith</span></div>
+                        <div class="order-info">Email: john@example.com</div>
+                        <div class="order-info">Items: <span>2 items</span></div>
+                        <div class="order-info">Date: <span>2024-01-15</span></div>
+                        <div class="total">Total: $89.97</div>
+                    </div>
+
+                    <div class="order-right">
+                        <button class="details-btn">👁️ View Details</button>
+                        <select class="dropdown">
+                            <option>Completed</option>
+                            <option>Pending</option>
+                            <option>Shipped</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="order-left">
+                        <div class="order-id">
+                            ORD-001 <span class="status">completed</span>
+                        </div>
+                        <div class="order-info">Customer: <span>John Smith</span></div>
+                        <div class="order-info">Email: john@example.com</div>
+                        <div class="order-info">Items: <span>2 items</span></div>
+                        <div class="order-info">Date: <span>2024-01-15</span></div>
+                        <div class="total">Total: $89.97</div>
+                    </div>
+
+                    <div class="order-right">
+                        <button class="details-btn">👁️ View Details</button>
+                        <select class="dropdown">
+                            <option>Completed</option>
+                            <option>Pending</option>
+                            <option>Shipped</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="customer-page">
+                <h1 id="cust-h1">Customer Management</h1>
+                <p id="cust-p">Manage customer accounts and view customer data.</p>
+
+                <!-- Stats Section -->
+                <div class="stats">
+                    <div class="stat-box">
+                        <h2>247</h2>
+                        <p>Total Customers</p>
+                    </div>
+                    <div class="stat-box">
+                        <h2>189</h2>
+                        <p>Active Customers</p>
+                    </div>
+                    <div class="stat-box">
+                        <h2>23</h2>
+                        <p>VIP Customers</p>
+                    </div>
+                    <div class="stat-box">
+                        <h2>$12,450</h2>
+                        <p>Avg. Lifetime Value</p>
+                    </div>
+                </div>
+
+                <!-- Customer List -->
+                <div class="customer-list">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search customers by name or email...">
+                    </div>
+
+                    <!-- Customer Card -->
+                    <div class="customer-card">
+                        <div class="customer-info">
+                            <div class="customer-name">
+                                John Smith <span class="status">ACTIVE</span>
+                            </div>
+                            <div class="contact-info">📧 john@example.com</div>
+                            <div class="contact-info">📞 +1 (555) 123-4567</div>
+                            <div class="contact-info">📍 New York, NY</div>
+                            <div class="order-info">📅 Joined 1/15/2024 · 12 orders · $480.00 total</div>
+                        </div>
+                        <div class="actions">
+                            <button>View Details</button>
+                            <button>Send Email</button>
+                        </div>
+                    </div>
+
+                    <!-- Another Customer -->
+                    <div class="customer-card">
+                        <div class="customer-info">
+                            <div class="customer-name">
+                                Sarah Johnson <span class="status">ACTIVE</span>
+                            </div>
+                            <div class="contact-info">📧 sarah@example.com</div>
+                            <div class="contact-info">📞 +1 (555) 987-6543</div>
+                            <div class="contact-info">📍 Los Angeles, CA</div>
+                            <div class="order-info">📅 Joined 2/20/2024 · 8 orders · $320.00 total</div>
+                        </div>
+                        <div class="actions">
+                            <button>View Details</button>
+                            <button>Send Email</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="customer-list">
+
+                    <!-- Customer Card -->
+                    <div class="customer-card">
+                        <div class="customer-info">
+                            <div class="customer-name">
+                                John Smith <span class="status">ACTIVE</span>
+                            </div>
+                            <div class="contact-info">📧 john@example.com</div>
+                            <div class="contact-info">📞 +1 (555) 123-4567</div>
+                            <div class="contact-info">📍 New York, NY</div>
+                            <div class="order-info">📅 Joined 1/15/2024 · 12 orders · $480.00 total</div>
+                        </div>
+                        <div class="actions">
+                            <button>View Details</button>
+                            <button>Send Email</button>
+                        </div>
+                    </div>
+
+                    <!-- Another Customer -->
+                    <div class="customer-card">
+                        <div class="customer-info">
+                            <div class="customer-name">
+                                Sarah Johnson <span class="status">ACTIVE</span>
+                            </div>
+                            <div class="contact-info">📧 sarah@example.com</div>
+                            <div class="contact-info">📞 +1 (555) 987-6543</div>
+                            <div class="contact-info">📍 Los Angeles, CA</div>
+                            <div class="order-info">📅 Joined 2/20/2024 · 8 orders · $320.00 total</div>
+                        </div>
+                        <div class="actions">
+                            <button>View Details</button>
+                            <button>Send Email</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="customer-list">
+
+                    <!-- Customer Card -->
+                    <div class="customer-card">
+                        <div class="customer-info">
+                            <div class="customer-name">
+                                John Smith <span class="status">ACTIVE</span>
+                            </div>
+                            <div class="contact-info">📧 john@example.com</div>
+                            <div class="contact-info">📞 +1 (555) 123-4567</div>
+                            <div class="contact-info">📍 New York, NY</div>
+                            <div class="order-info">📅 Joined 1/15/2024 · 12 orders · $480.00 total</div>
+                        </div>
+                        <div class="actions">
+                            <button>View Details</button>
+                            <button>Send Email</button>
+                        </div>
+                    </div>
+                    <div class="customer-card">
+                        <div class="customer-info">
+                            <div class="customer-name">
+                                John Smith <span class="status">ACTIVE</span>
+                            </div>
+                            <div class="contact-info">📧 john@example.com</div>
+                            <div class="contact-info">📞 +1 (555) 123-4567</div>
+                            <div class="contact-info">📍 New York, NY</div>
+                            <div class="order-info">📅 Joined 1/15/2024 · 12 orders · $480.00 total</div>
+                        </div>
+                        <div class="actions">
+                            <button>View Details</button>
+                            <button>Send Email</button>
+                        </div>
+                    </div>
+                    <div class="customer-card">
+                        <div class="customer-info">
+                            <div class="customer-name">
+                                John Smith <span class="status">ACTIVE</span>
+                            </div>
+                            <div class="contact-info">📧 john@example.com</div>
+                            <div class="contact-info">📞 +1 (555) 123-4567</div>
+                            <div class="contact-info">📍 New York, NY</div>
+                            <div class="order-info">📅 Joined 1/15/2024 · 12 orders · $480.00 total</div>
+                        </div>
+                        <div class="actions">
+                            <button>View Details</button>
+                            <button>Send Email</button>
+                        </div>
+                    </div>
+                    <div class="customer-card">
+                        <div class="customer-info">
+                            <div class="customer-name">
+                                John Smith <span class="status">ACTIVE</span>
+                            </div>
+                            <div class="contact-info">📧 john@example.com</div>
+                            <div class="contact-info">📞 +1 (555) 123-4567</div>
+                            <div class="contact-info">📍 New York, NY</div>
+                            <div class="order-info">📅 Joined 1/15/2024 · 12 orders · $480.00 total</div>
+                        </div>
+                        <div class="actions">
+                            <button>View Details</button>
+                            <button>Send Email</button>
+                        </div>
+                    </div>
+
+                    <!-- Another Customer -->
+                    <div class="customer-card">
+                        <div class="customer-info">
+                            <div class="customer-name">
+                                Sarah Johnson <span class="status">ACTIVE</span>
+                            </div>
+                            <div class="contact-info">📧 sarah@example.com</div>
+                            <div class="contact-info">📞 +1 (555) 987-6543</div>
+                            <div class="contact-info">📍 Los Angeles, CA</div>
+                            <div class="order-info">📅 Joined 2/20/2024 · 8 orders · $320.00 total</div>
+                        </div>
+                        <div class="actions">
+                            <button>View Details</button>
+                            <button>Send Email</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="analetics">
+                <h1 id="ana-h1">Analytics & Reports</h1>
+                <p id="ana-p">Detailed insights into your store’s performance and trends.</p>
+
+                <!-- Top Cards -->
+                <div class="anal-dashboard">
+                    <div class="card5">
+                        <h3>Total Revenue</h3>
+                        <h2>$45,231</h2>
+                        <span class="green">↑ 12.5%</span>
+                    </div>
+                    <div class="card5">
+                        <h3>Total Orders</h3>
+                        <h2>1,234</h2>
+                        <span class="green">↑ 8.2%</span>
+                    </div>
+                    <div class="card5">
+                        <h3>New Customers</h3>
+                        <h2>89</h2>
+                        <span class="red">↓ 3.1%</span>
+                    </div>
+                    <div class="card5">
+                        <h3>Products Sold</h3>
+                        <h2>2,456</h2>
+                        <span class="green">↑ 15.3%</span>
+                    </div>
+                </div>
+
+                <!-- Middle Section -->
+                <div class="grid-2">
+                    <div class="performance">
+                        <h4>Sales Performance</h4>
+                        <p>This Month: <b>$12,450</b> <span class="green">↑ 18.2%</span></p>
+                        <p>Last Month: <b>$10,530</b></p>
+                        <p>Average Order Value: <b>$36.70</b> <span class="red">↓ 4.1%</span></p>
+                    </div>
+                    <div class="performance product-list">
+                        <h4>Top Performing Products</h4>
+                        <p>Classic White Tee — $4,680 (156 units sold)</p>
+                        <p>Vintage Black Tee — $4,020 (134 units sold)</p>
+                        <p>Premium Cotton Tee — $3,920 (98 units sold)</p>
+                        <p>Organic Hemp Tee — $3,480 (87 units sold)</p>
+                        <p>Minimalist Gray Tee — $2,280 (76 units sold)</p>
+                    </div>
+                </div>
+
+                <!-- Bottom Section -->
+                <div class="grid-3">
+                    <div class="performance">
+                        <h4>Customer Insights</h4>
+                        <p>Returning Customers: <b>68%</b></p>
+                        <p>Avg Session Duration: <b>4m 32s</b></p>
+                        <p>Cart Abandonment Rate: <b>23.6%</b></p>
+                        <p>Customer Satisfaction: <b>4.8/5</b></p>
+                    </div>
+                    <div class="performance">
+                        <h4>Traffic Sources</h4>
+                        <p>Direct — 45%</p>
+                        <p>Social Media — 28%</p>
+                        <p>Search Engines — 18%</p>
+                        <p>Email Marketing — 9%</p>
+                    </div>
+                    <div class="performance quick-reports">
+                        <h4>Quick Reports</h4>
+                        <ul>
+                            <li>📄 Monthly Sales Report</li>
+                            <li>👥 Customer Demographics</li>
+                            <li>📦 Inventory Analysis</li>
+                            <li>📈 Growth Trends</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="categories">
+                <h2 id="cat-h2">Category Management</h2>
+                <p class="subtitle">Organize and manage product categories and collections.</p>
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <p>Total Categories</p>
+                        <h3>5</h3>
+                    </div>
+                    <div class="stat-card">
+                        <p>Total Products</p>
+                        <h3>128</h3>
+                    </div>
+                    <div class="stat-card">
+                        <p>Active Categories</p>
+                        <h3>4</h3>
+                    </div>
+                </div>
+
+                <button class="add-btn">+ Add Category</button>
+
+                <div class="categories">
+                    <div class="category-card" id="cat">
+                        <div class="category-info">
+                            <h4>Men's T-Shirts <span class="badge">ACTIVE</span></h4>
+                            <p>Comfortable and stylish t-shirts for men</p>
+                            <span class="category-meta">45 products • Created: 1/15/2024 • Slug: /mens-tshirts</span>
+                        </div>
+                        <div class="actions">
+                            <button>Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-info">
+                            <h4>Women's T-Shirts <span class="badge">ACTIVE</span></h4>
+                            <p>Trendy and comfortable t-shirts for women</p>
+                            <span class="category-meta">38 products • Created: 1/15/2024 • Slug: /womens-tshirts</span>
+                        </div>
+                        <div class="actions">
+                            <button>Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-info">
+                            <h4>Women's T-Shirts <span class="badge">ACTIVE</span></h4>
+                            <p>Trendy and comfortable t-shirts for women</p>
+                            <span class="category-meta">38 products • Created: 1/15/2024 • Slug: /womens-tshirts</span>
+                        </div>
+                        <div class="actions">
+                            <button>Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-info">
+                            <h4>Women's T-Shirts <span class="badge">ACTIVE</span></h4>
+                            <p>Trendy and comfortable t-shirts for women</p>
+                            <span class="category-meta">38 products • Created: 1/15/2024 • Slug: /womens-tshirts</span>
+                        </div>
+                        <div class="actions">
+                            <button>Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-info">
+                            <h4>Women's T-Shirts <span class="badge">ACTIVE</span></h4>
+                            <p>Trendy and comfortable t-shirts for women</p>
+                            <span class="category-meta">38 products • Created: 1/15/2024 • Slug: /womens-tshirts</span>
+                        </div>
+                        <div class="actions">
+                            <button>Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</html>

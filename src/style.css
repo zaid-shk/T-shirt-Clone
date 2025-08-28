@@ -25,12 +25,14 @@ body {
     width: 100vw;
     /* background: #000; */
 }
-
+#main #admin{
+    display: none;
+}
 #nav {
     position: fixed;
     width: 99vw;
     height: 10vh;
-    background: #FFFFFF;
+    background-color: #FFFFFF;
     background-blend-mode: blur;
     display: flex;
     align-items: center;
@@ -83,7 +85,7 @@ body.dark #mid a{
     gap: 2vw;
 }
 #dark{
-    display: flex;
+    display: block;
 }
 #dark i{
     /* margin-left: 2vw; */

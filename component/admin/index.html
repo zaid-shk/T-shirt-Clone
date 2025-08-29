@@ -15,39 +15,40 @@
             <h2>Admin Panel</h2>
             <div class="right">
                 <i class="ri-notification-3-line"></i>
-                <i class="ri-settings-3-line"></i>
+                <i id="set2" class="ri-settings-3-line"></i>
                 <i class="ri-user-6-line"></i>
+                <h3>Wellcome admin</h3>
                 <i class="ri-logout-circle-r-line"></i>
             </div>
         </div>
         <div id="second-main">
 
             <div id="sidebar">
-                <div class="sidebar-in">
+                <div class="sidebar-in" id="deshbtn-d">
                     <i class="ri-layout-grid-line"></i>
                     <h2 id="desh-btn">Deshboard</h2>
                 </div>
-                <div class="sidebar-in">
-                    <i class="ri-box-3-line"></i>
+                <div class="sidebar-in" id="probtn-d">
+                    <i class="ri-box-3-line" ></i>
                     <h2 id="pro-btn">Product</h2>
                 </div>
-                <div class="sidebar-in">
+                <div class="sidebar-in" id="ordbtn-d">
                     <i class="ri-shopping-cart-line"></i>
                     <h2 id="ord-btn">Orders</h2>
                 </div>
-                <div class="sidebar-in">
+                <div class="sidebar-in" id="custbtn-d">
                     <i class="ri-group-line"></i>
                     <h2 id="cust-btn">Customer</h2>
                 </div>
-                <div class="sidebar-in">
+                <div class="sidebar-in" id="anabtn-d">
                     <i class="ri-line-chart-line"></i>
                     <h2 id="ana-btn">Analytics</h2>
                 </div>
-                <div class="sidebar-in">
+                <div class="sidebar-in" id="catebtn-d">
                     <i class="ri-price-tag-3-line"></i>
                     <h2 id="cate-btn">Categories</h2>
                 </div>
-                <div class="sidebar-in">
+                <div class="sidebar-in" id="setbtn-d">
                     <i class="ri-settings-4-line"></i>
                     <h2 id="set-btn">Setting</h2>
                 </div>
@@ -836,6 +837,130 @@
                     </div>
                 </div>
 
+            </div>
+            <div id="setting-page">
+                <h1 id="set-h1">Settings</h1>
+                <p id="set-p">Manage your store settings and preferences.</p>
+                <div class="settings-container" id="store-settings">
+                    <div class="settings-header">
+                        <i class="ri-store-2-line"></i> Store Settings
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="storeName">Store Name</label>
+                            <input type="text" id="storeName" class="form-input" value="ThreadCo">
+                        </div>
+                        <div class="form-group">
+                            <label for="storeEmail">Store Email</label>
+                            <input type="email" id="storeEmail" class="form-input" value="contact@threadco.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="storeDescription">Store Description</label>
+                        <textarea id="storeDescription" class="form-input"
+                            rows="3">Premium quality t-shirts for everyone</textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="text" id="phoneNumber" class="form-input" value="+1 (555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="currency">Currency</label>
+                            <input type="text" id="currency" class="form-input" value="USD">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="storeAddress">Store Address</label>
+                        <input type="text" id="storeAddress" class="form-input" value="123 Fashion Street, NY 10001">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="taxRate">Tax Rate (%)</label>
+                            <input type="text" id="taxRate" class="form-input" value="8.25">
+                        </div>
+                        <div class="form-group">
+                            <label for="shippingRate">Default Shipping Rate ($)</label>
+                            <input type="text" id="shippingRate" class="form-input" value="5.99">
+                        </div>
+                    </div>
+
+                    <button class="btn-save" id="saveSettings">Save Store Settings</button>
+                </div>
+
+                <!-- Remix Icons for the Store Icon -->
+                <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+                <div class="notification-settings">
+                    <h2 class="title">Notification Settings</h2>
+
+                    <div class="setting-item">
+                        <label for="new-orders" class="setting-label">Email notifications for new orders</label>
+                        <span class="setting-description">Get notified when new orders are placed</span>
+                        <input type="checkbox" id="new-orders" class="setting-checkbox" checked />
+                    </div>
+
+                    <div class="setting-item">
+                        <label for="new-customers" class="setting-label">Email notifications for new customers</label>
+                        <span class="setting-description">Get notified when new customers register</span>
+                        <input type="checkbox" id="new-customers" class="setting-checkbox" checked />
+                    </div>
+
+                    <div class="setting-item">
+                        <label for="low-inventory" class="setting-label">Low inventory alerts</label>
+                        <span class="setting-description">Get notified when products are running low</span>
+                        <input type="checkbox" id="low-inventory" class="setting-checkbox" />
+                    </div>
+
+                    <div class="setting-item">
+                        <label for="push-notifications" class="setting-label">Push notifications</label>
+                        <span class="setting-description">Receive browser push notifications</span>
+                        <input type="checkbox" id="push-notifications" class="setting-checkbox" />
+                    </div>
+
+                    <button class="save-button">Save Notification Settings</button>
+                </div>
+                <div class="profile-settings">
+                    <h2 id="pro">Profile Settings</h2>
+                    <form action="/update-profile" method="POST">
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email">
+                        </div>
+
+                        <div class="password-section">
+                            <h3 id="pro2">Change Password</h3>
+                            <div class="form-group">
+                                <label for="current-password">Current Password</label>
+                                <input type="password" id="current-password" name="current-password"
+                                    placeholder="Enter current password">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="new-password">New Password</label>
+                                <input type="password" id="new-password" name="new-password"
+                                    placeholder="Enter new password">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirm-password">Confirm New Password</label>
+                                <input type="password" id="confirm-password" name="confirm-password"
+                                    placeholder="Confirm new password">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="update-btn">Update Profile</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
